@@ -1,9 +1,10 @@
+#!/usr/bin/python3
 import requests
 import json
 
 appid = '' # App ID of the game you want to get the playtime of
-key = '' # Steam Web API Key
 steamid = '' # Steam Profile 64bit ID
+key = '' # Steam Web API Key
 
 # api-endpoint
 steam_url = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/"
@@ -24,6 +25,7 @@ def get_playtime(data):
             playtime_forever = i['playtime_forever']
             return playtime_forever
 
+# Steam stores playtime in minutes, so we need to convert it to hours
 hours = get_playtime(data) / 60
 print(hours)
 print(int(hours))
