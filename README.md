@@ -15,7 +15,10 @@ key = 'XXXXXXXXXXXX' # Steam Web API Key
 ```
 
 Run the script with python3
-`python3 steamGET.py`
+
+```
+python3 steamGET.py
+```
 
 #### Resources to find:
 
